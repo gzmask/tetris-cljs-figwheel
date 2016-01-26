@@ -3,8 +3,6 @@
               clojure.set
               stats))
 
-(enable-console-print!)
-
 (def colors
   {:green 0x00FF00
    :purple 0xCC33FF
