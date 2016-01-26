@@ -6,13 +6,9 @@
 
 # `threejs-figwheel`
 
-An example project which brings up a minimal "live coding" environment for Clojure-based WebGL in the browser, courtesy of [ClojureScript](https://github.com/clojure/clojurescript), [three.js](http://threejs.org/) and [Figwheel](https://github.com/bhauman/lein-figwheel).
+An (yet another) Tetris which brings up a minimal "live coding" environment for ThreeJS and Clojure in the browser, courtesy of [ClojureScript](https://github.com/clojure/clojurescript), [three.js](http://threejs.org/) and [Figwheel](https://github.com/bhauman/lein-figwheel).
 
-This is basically the Figwheel template project in Leiningen, with the core ClojureScript file set up to do some three.js, and a stripped-down `index.html` to host the results. The HTML also wheels in three.js from a CDN (so alter to taste).
-
-Most of the effort in this project has gone into making the application state as nearly idempotent as possible, so that repeated page or code reloads don't result in multiple canvas instances, background rendering callbacks, and so on. The reloading is done by completely tearing down the canvas and rendering pipeline and rebuilding; for a proper live coding environment, or for bigger projects, this probably needs to be a bit more subtle.
-
-This project is partially inspired by [this by Chris McCormick](https://github.com/chr15m/clojurescript-threejs-playground), [Henry Garner's Multisnake](https://github.com/henrygarner/multisnake), and [Chestnut](https://github.com/plexus/chestnut).
+This project is partially inspired by [Cassie](https://github.com/cassiel), [this by Chris McCormick](https://github.com/chr15m/clojurescript-threejs-playground), [Henry Garner's Multisnake](https://github.com/henrygarner/multisnake), and [Chestnut](https://github.com/plexus/chestnut).
 
 ## Setup (from Figwheel docs)
 
@@ -42,6 +38,6 @@ get live reloading, nor a REPL.
 
 ## License
 
-Copyright © 2015 Nick Rothwell, nick@cassiel.com.
+Copyright © 2015 Gzmask@gmail.com
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+Distributed under the WTFPL – Do What the Fuck You Want to Public License.
