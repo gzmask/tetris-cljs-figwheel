@@ -4,9 +4,9 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.7.0"]
-                 [org.clojure/clojurescript "1.7.170"]
-                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]]
+  :dependencies [[org.clojure/clojure "1.8.0"]
+                 [org.clojure/clojurescript "1.7.228"]
+                 [org.clojure/core.async "0.2.374"]]
 
   :plugins [[lein-cljsbuild "1.1.2"]
             [lein-figwheel "0.5.0-4"]]
@@ -33,12 +33,12 @@
               :source-paths ["src"]
               :compiler {:output-to "resources/public/js/compiled/threejs_figwheel.js"
                          :main threejs-figwheel.core
-                         :optimizations :advanced
+                         :optimizations :simple
                          :foreign-libs [{:file "resources/public/js/three.min.js"
                                          :provides ["three"]}
                                         {:file "resources/public/js/stats.min.js"
                                          :provides ["stats"]}]
-                         :pretty-print true}}]}
+                         :pretty-print false}}]}
 
   :figwheel {
              ;; :http-server-root "public" ;; default and assumes "resources"

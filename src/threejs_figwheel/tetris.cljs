@@ -1,5 +1,6 @@
 (ns threejs-figwheel.tetris
     (:require three
+              clojure.set
               stats))
 
 (enable-console-print!)

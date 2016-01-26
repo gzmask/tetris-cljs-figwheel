@@ -1,6 +1,6 @@
 (ns threejs-figwheel.core
-    (:require [figwheel.client :as fw]
-              [threejs-figwheel.tetris :as tetris]
+    (:require [threejs-figwheel.tetris :as tetris]
+              clojure.set
               three
               stats))
 
