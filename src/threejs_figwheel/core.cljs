@@ -8,7 +8,7 @@
 
 ;; There's a little debugging counter in here. This state variable
 ;; tracks a couple of components: the three.js renderer and the stats object.
-(def GAME-STATE (atom {:c 0
+(defonce GAME-STATE (atom {:c 0
                        :last-dropped-time 0
                        :falling-block {:type (rand-nth (keys tetris/blocks))
                                        :rotation (rand-int 4)

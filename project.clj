@@ -4,12 +4,15 @@
   :license {:name "Do what the fuck you want to public license"
             :url "www.wtfpl.net"}
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/clojurescript "1.7.228"]
-                 [org.clojure/core.async "0.2.374"]]
+  :min-lein-version "2.5.3"
 
-  :plugins [[lein-cljsbuild "1.1.2"]
-            [lein-figwheel "0.5.0-4"]]
+  :dependencies [[org.clojure/clojure "1.7.0"]
+                 [org.clojure/clojurescript "1.7.170"]
+                 [org.clojure/core.async "0.2.374"
+                  :exclusions [org.clojure/tools.reader]]]
+
+  :plugins [[lein-figwheel "0.5.0-6"]
+            [lein-cljsbuild "1.1.2" :exclusions [[org.clojure/clojure]]]]
 
   :source-paths ["src"]
 
@@ -33,12 +36,13 @@
               :source-paths ["src"]
               :compiler {:output-to "resources/public/js/compiled/threejs_figwheel.js"
                          :main threejs-figwheel.core
-                         :optimizations :simple
+                         :optimizations :advanced
                          :foreign-libs [{:file "resources/public/js/three.min.js"
                                          :provides ["three"]}
                                         {:file "resources/public/js/stats.min.js"
                                          :provides ["stats"]}]
-                         :pretty-print false}}]}
+                         :externs ["resources/public/js/three.ext.js"]
+                         :pretty-print true}}]}
 
   :figwheel {
              ;; :http-server-root "public" ;; default and assumes "resources"
