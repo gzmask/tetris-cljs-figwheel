@@ -3,6 +3,15 @@
               clojure.set
               stats))
 
+(def blocks
+  {:L #{[0 0] [0 1] [0 -1] [1 -1]}
+  :J #{[0 0] [0 1] [0 -1] [-1 -1]}
+  :O #{[0 0] [1 0] [1 -1] [0 -1]}
+  :S #{[0 0] [-1 0] [0 -1] [1 -1]}
+  :Z #{[0 0] [1 0] [0 -1] [-1 -1]}
+  :I #{[0 0] [0 1] [0 -1] [0 2]}
+  :T #{[0 0] [1 0] [-1 0] [0 1]}})
+
 (def colors
   {:green 0x00FF00
    :purple 0xCC33FF
@@ -49,15 +58,6 @@
   "translate x y axis to array index for cells, x/y starts from 0"
   [x y]
   (+ (* y (:x grid-size)) x))
-
-(def blocks
-  {:L #{[0 0] [0 1] [0 -1] [1 -1]}
-  :J #{[0 0] [0 1] [0 -1] [-1 -1]}
-  :O #{[0 0] [1 0] [1 -1] [0 -1]}
-  :S #{[0 0] [-1 0] [0 -1] [1 -1]}
-  :Z #{[0 0] [1 0] [0 -1] [-1 -1]}
-  :I #{[0 0] [0 1] [0 -1] [0 2]}
-  :T #{[0 0] [1 0] [-1 0] [0 1]}})
 
 (defn block-rotated [block-axes]
   (let [local-axes block-axes
