@@ -1,8 +1,6 @@
 # A tetris of ThreeJS, CLJS and Figwheel trio.
 
-![screenshot](https://github.com/gzmask/tetris-cljs-figwheel/raw/master/tetris.jpg "tetris")
-
-[Tetris Game(WebGL)](http://gzmask.github.io/tetris-cljs-figwheel)
+[![screenshot](https://github.com/gzmask/tetris-cljs-figwheel/raw/master/tetris.jpg "Play Tetris - WebGL required")](http://gzmask.github.io/tetris-cljs-figwheel)
 
 # `threejs-figwheel`
 
